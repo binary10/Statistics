@@ -13,7 +13,7 @@ class ProportionTest:
         self.b_se       = None                  # Store standard errors of sample
         self.b_ci_max   = None                  # Store max endpoint of confidence interval
 
-    def loop(self):
+    def test(self):
         z_confidence = s.norm.ppf(.97)
         self.b          = self.rv.rvs(1000)     # Pull 1000 samples from binomial
         # Calculate S.E. for each sample
@@ -21,9 +21,6 @@ class ProportionTest:
         # Calculate endpoint of CI for each sample
         self.b_ci_max   = self.b/1000. + z_confidence * self.b_se 
         return len([a for a in self.b_ci_max if a < .35])
-
-    def test(self):
-        return self.loop()
 
         
 p = ProportionTest()
