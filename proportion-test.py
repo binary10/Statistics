@@ -28,7 +28,8 @@ p.test()/1000. - 1
 
 
 
-# Running a sequence of the same test #################################
+# Normality Test ######################################################
+# Running a test multiple times #######################################
 #
 # Take a sample of size 'n' from a normal distribution (collect data).
 # Test if this sample is normal.
