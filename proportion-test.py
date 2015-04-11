@@ -22,9 +22,9 @@ class ProportionTest:
         self.b_ci_max   = self.b/1000. + z_confidence * self.b_se 
         return len([a for a in self.b_ci_max if a < .35])
 
-        
+# Test my proportion hypothesis test class.       
 p = ProportionTest()
-p.test()/1000. - 1
+1 - (p.test()/1000.)
 
 
 
